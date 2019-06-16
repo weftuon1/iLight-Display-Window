@@ -12,4 +12,4 @@ IoT Devices with ARC
 ### Function
 
 ### System Architecture
-![system_pic][0]
+![image](https://github.com/weftuon1/iLight-Display-Window/blob/master/src/system_pic.png)
