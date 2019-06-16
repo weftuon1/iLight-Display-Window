@@ -12,3 +12,4 @@ IoT Devices with ARC
 ### Function
 
 ### System Architecture
+![system_iLightDisplayWin][0]
