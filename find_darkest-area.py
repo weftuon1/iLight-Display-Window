@@ -6,17 +6,35 @@ import numpy as np
 import argparse
 import cv2
 
+import RPi.GPIO as GPIO
+from IIELab.GroveStarterKit import Servo
+
+servo1PIN = 18
+servo2PIN = 15
+
+GPIO.setmode(GPIO.BCM)
+servo1 = Servo()
+servo1.attach(servo1PIN)
+servo2 = Servo()
+servo2.attach(servo2PIN)
+
+angle1 = 90
+angle2 = 90
+servo1.write(angle1)
+servo2.write(angle2)
+
 while True:
     d1 = time.strftime("%Y_%m_%d-%H_%M_%S")
-    action = "fswebcam -r 500x300 -S 0 --no-banner -d /dev/video0 " + "./images/" + "test" + ".jpg"
+    action = "fswebcam -r 480x360 -S 10 --no-banner -d /dev/video0 " + "./images/" + "test" + ".jpg"
     os.system(action)
 
     # construct the argument parse and parse the arguments
     ap = argparse.ArgumentParser()
     #ap.add_argument("-i", "--image", help = "path to the image file")
-    ap.add_argument("-r", "--radius", type = int, help = "radius of Gaussian blur; must be odd")
+    #ap.add_argument("-r", "--radius", type = int, help = "radius of Gaussian blur; must be odd")
     args = vars(ap.parse_args())
 
+    args["radius"] = 41
     # load the image and convert it to grayscale
     #image = cv2.imread(args["image"])
     image = cv2.imread("./images/test.jpg")
@@ -34,6 +52,13 @@ while True:
     #cv2.imshow("Robust", image)
     #cv2.waitKey(0)
     cv2.imwrite("./images/test2.jpg", image)
+
+    print("minLoc: ", minLoc)
+    print("Finished finding darkest area.")
+   
+   	
+    servo1.write(135 - (minLoc[0]*90/544))
+    servo2.write(20 + minLoc[1]*90/288)
 
     time.sleep(1*20)
 
