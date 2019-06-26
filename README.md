@@ -1,5 +1,5 @@
 # 智慧燈控展示窗 iLight-Display-Window
-IoT Devices with ARCIoTDK aiming to light on the object in display window. Perfectly brings out the beauty of exhibit.
+IoT Devices with ARC IoTDK aiming to light on the object in display window. Perfectly brings out the beauty of exhibit.
 
 * [Introduction](#introduction)
 	* [Function](#function)
