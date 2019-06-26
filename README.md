@@ -6,7 +6,7 @@ IoT Devices with ARC IoTDK aiming to light on the object in display window. Perf
 	* [System Architecture](#system-architecture)
 
 ## Introduction
-**iLight Display Window ——Light up your life!**
+**iLight Display Window —— Light up your life!**
 
 This project is aiming to produce a display window that can control led light automatically. No matter how does environment light shed around our object, it can perfectly show the beauty of exhibit.
 
