@@ -1,3 +1,4 @@
 arc_node
-* Need to check '\n' from RPi
-* Location not done
+* [closed]Need to check '\n' from RPi
+* [closed]Location not done
+* [open] Need specific measurement
