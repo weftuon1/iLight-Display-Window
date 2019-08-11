@@ -10,21 +10,21 @@ void attach(uint32_t pin, uint32_t id, uint32_t bit){
     statePWM=_gpio_pwm->gpio_open((1 << bit));
 	if ( statePWM== E_OPNED)
 	{
-        printf("opened\r\n");
+        //printf("opened\r\n");
 		_gpio_pwm->gpio_control(GPIO_CMD_SET_BIT_DIR_OUTPUT,
 								(void *)(1 << bit));
 	}else if(statePWM==E_OK){
-        printf("successed\r\n");
+        //printf("successed\r\n");
     }
 
-	for(int i=0;i<100;i++)
+	/*for(int i=0;i<100;i++)
 	{
 		_gpio_pwm->gpio_write(1 << bit, 1 << bit);
         //board_delay_ms(100,1);
 		arc_delay_us(DEFAULT_PULSE_WIDTH);
 		_gpio_pwm->gpio_write(0, 1 << bit);
 		arc_delay_us(SIGNAL_PERIOD-DEFAULT_PULSE_WIDTH);
-	}
+	}*/
 
     _bit=bit;
     _attached=true;
@@ -63,11 +63,38 @@ void detach(){
     }
 }
 
-double W2Deg(uint32_t w){
-    return 90;
+double X2Deg(uint32_t x){
+    double deg;
+    double dbl_x = x;
+
+    if(x < SREEN_WIDTH_MID){
+        //if(x<0)x=0;
+        deg=atan((SREEN_WIDTH_MID-dbl_x)/LENGTH_2_OBJ)/PI*180;
+        printf("deg=%f\r\n", deg);
+        return 90+deg;
+    }else{
+        if(x>SREEN_WIDTH)x=SREEN_WIDTH;
+        deg=atan((dbl_x-SREEN_WIDTH_MID)/LENGTH_2_OBJ)/PI*180;
+        printf("deg=%f\r\n", deg);
+        return 90-deg;
+    }
+    //return 90;
 }
 
-double H2Deg(uint32_t h){
-    return 90;
+double Y2Deg(uint32_t y){
+    double deg;
+    double dbl_y = y;
+
+    if(y < SREEN_HEIGHT_MID){
+        //if(y<0)y=0;
+        deg=atan((SREEN_HEIGHT_MID-dbl_y)/LENGTH_2_OBJ)/PI*180;
+        printf("deg=%f\r\n", deg);
+        return 90-deg;
+    }else{
+        if(y>SREEN_HEIGHT)y=SREEN_HEIGHT;
+        deg=atan((dbl_y-SREEN_HEIGHT_MID)/LENGTH_2_OBJ)/PI*180;
+        printf("deg=%f\r\n", deg);
+        return 90+deg;
+    }
 }
 

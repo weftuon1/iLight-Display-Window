@@ -15,7 +15,7 @@ static uint16_t sReceiveHead = 0;
 
 static DEV_UART *Uart;
 
-uint32_t width, height;
+uint32_t x, y;
 
 void UartEnable(void);
 void UartSend(const uint8_t *aBuf, uint16_t aBufLength);
@@ -24,7 +24,7 @@ void processTransmit(void);
 void arcUartProcess(void);
 void UART2GotLine(uint8_t *line, uint32_t len);
 void processReceiveFromRPi(void);
-uint32_t get_width();
-uint32_t get_height();
+uint32_t get_x();
+uint32_t get_y();
 
 #endif

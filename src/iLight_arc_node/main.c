@@ -22,11 +22,11 @@ int main(void)
 	while(1){		
 		/*read darkest location from RPi*/
 		processReceiveFromRPi();		
-printf("transfering...\r\n");
+//printf("transfering...\r\n");
 		/*location to degree*/
-		deg_h=W2Deg(get_width());
-		deg_v=H2Deg(get_height());
-printf("writing...\r\n");
+		deg_h=X2Deg(get_x());
+		deg_v=Y2Deg(get_y());
+//printf("writing...\r\n");
 		/*write degree to servo*/
 		attach(IOTDK_GPIO_PWM_PIN_0, IOTDK_GPIO_PWM_ID_0, IOTDK_PWM_0_BIT);
 		write(deg_v);
@@ -34,7 +34,7 @@ printf("writing...\r\n");
 		attach(IOTDK_GPIO_PWM_PIN_1, IOTDK_GPIO_PWM_ID_1, IOTDK_PWM_1_BIT);
 		write(deg_h);
 		detach();
-printf("done.\r\n");
+//printf("done.\r\n");
 		/*send txt to RPi*/
 		UartSend("Done\r\n", 6);
 		processTransmit();

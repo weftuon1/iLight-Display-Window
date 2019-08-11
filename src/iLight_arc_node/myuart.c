@@ -97,8 +97,8 @@ void arcUartProcess(void)
 
 
 void UART2GotLine(uint8_t *line, uint32_t len) {
-	//int32_t width, hight;
-	sscanf((const char*) line, "%ld,%ld", &width, &height);
+	
+	sscanf((const char*) line, "%ld,%ld", &x, &y);
 	
 }
 
@@ -127,7 +127,7 @@ void processReceiveFromRPi(void)
 
         len=sReceivePos-1;
 //printf("read %c\r\n", sReceiveBuffer[sReceivePos-1]);
-        if(sReceiveBuffer[sReceivePos-1]== 'a'){
+        if(sReceiveBuffer[sReceivePos-1]== '\n'){
 //printf("got enter \r\n");
             sReceiveBuffer[sReceivePos-1]='\0';
             if(sReceivePos>0){
@@ -146,12 +146,12 @@ exit:
     return;
 }
 
-uint32_t get_width(){
-printf("w=%d\r\n", width);
-    return width;
+uint32_t get_x(){
+printf("x=%d\r\n", x);
+    return x;
 }
 
-uint32_t get_height(){
-printf("h=%d\r\n", height);
-    return height;
+uint32_t get_y(){
+printf("y=%d\r\n", y);
+    return y;
 }
