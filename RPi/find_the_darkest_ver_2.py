@@ -6,6 +6,16 @@ import numpy as np
 import argparse
 import cv2
 
+import serial
+import struct
+
+# 115200, 8, N, 1
+ser = serial.Serial('/dev/serial0', 115200, timeout=None,
+                    parity=serial.PARITY_NONE)
+print(ser.name)
+
+
+
 while True:
     d1 = time.strftime("%Y_%m_%d-%H_%M_%S")
     action = "fswebcam -r 480x360 -S 10 --no-banner -d /dev/video0 " + "./images/" + "test" + ".jpg"
@@ -38,5 +48,11 @@ while True:
 
     print("minLoc: ", minLoc)
     print("Finished finding darkest area.")
+    print("Sending location to ARC.")
+
+    ser.write(struct.pack('>2B', minLoc[0], minLoc[1]))
+    ser.write(b'\r\n')
 
     time.sleep(1*20)
+
+ser.close()
