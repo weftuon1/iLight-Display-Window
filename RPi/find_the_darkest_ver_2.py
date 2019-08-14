@@ -18,7 +18,7 @@ print(ser.name)
 
 while True:
     d1 = time.strftime("%Y_%m_%d-%H_%M_%S")
-    action = "fswebcam -r 480x360 -S 10 --no-banner -d /dev/video0 " + "./images/" + "test" + ".jpg"
+    action = "fswebcam -r 480x360 -S 10 --no-banner " + "./images/" + "test" + ".jpg"
     os.system(action)
 
     # construct the argument parse and parse the arguments
