@@ -18,7 +18,7 @@ print(ser.name)
 
 while True:
     d1 = time.strftime("%Y_%m_%d-%H_%M_%S")
-    action = "fswebcam -r 480x360 -S 10 --no-banner " + "./images/" + "test" + ".jpg"
+    action = "fswebcam -r 480x360 -S 10 --no-banner -d /dev/video1 " + "./images/" + "test" + ".jpg"
     os.system(action)
 
     # construct the argument parse and parse the arguments
@@ -50,9 +50,10 @@ while True:
     print("Finished finding darkest area.")
     print("Sending location to ARC.")
 
-    ser.write(struct.pack('>2B', minLoc[0], minLoc[1]))
+    mesg=str(minLoc[0])+','+str(minLoc[1])
+    ser.write(mesg.encode())
     ser.write(b'\r\n')
 
-    time.sleep(1*20)
+    time.sleep(1*10)
 
 ser.close()
