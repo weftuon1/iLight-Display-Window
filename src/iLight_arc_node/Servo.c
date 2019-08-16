@@ -89,12 +89,12 @@ double Y2Deg(uint32_t y){
         //if(y<0)y=0;
         deg=atan((SREEN_HEIGHT_MID-dbl_y)/LENGTH_2_OBJ)/PI*180;
         printf("deg=%f\r\n", deg);
-        return 90-deg;
+        return 90-deg-V_DEG_OFFSET;
     }else{
         if(y>SREEN_HEIGHT)y=SREEN_HEIGHT;
         deg=atan((dbl_y-SREEN_HEIGHT_MID)/LENGTH_2_OBJ)/PI*180;
         printf("deg=%f\r\n", deg);
-        return 90+deg;
+        return 90+deg-V_DEG_OFFSET;
     }
 }
 

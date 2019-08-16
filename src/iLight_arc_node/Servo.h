@@ -18,6 +18,8 @@
 #define DEFAULT_PULSE_WIDTH     1500    //  90 degrees: 1.500 ms
 #define MAX_PULSE_WIDTH         2400    // 180 degrees: 2.400 ms
 
+#define V_DEG_OFFSET            18
+
 #define SIGNAL_PERIOD           20000    
 
 #define IOTDK_PWM_ID_0		    DFSS_GPIO_4B2_ID
