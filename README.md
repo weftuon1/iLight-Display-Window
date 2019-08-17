@@ -4,6 +4,13 @@ IoT Devices with ARC IoTDK aiming to light on the object in display window. Perf
 * [Introduction](#introduction)
 	* [Function](#function)
 	* [System Architecture](#system-architecture)
+* [Hardware and Software Setup](#hardware-and-software-setup)
+	* [Required Hardware](#required-hardware)
+	* [Required Software](#required-software)
+	* [Hardware Connection](#hardware-connection)
+* [User Manual](#user-manual)
+	* [Before Running This Application](#before-running-this-application)
+	* [Run This Application](#run-this-application)
 
 ## Introduction
 **iLight Display Window —— Light up your life!**
@@ -17,3 +24,17 @@ This project is aiming to produce a display window that can control led light au
 
 ### System Architecture
 ![image](https://github.com/weftuon1/iLight-Display-Window/blob/master/src/system_pic.png)
+
+## Hardware and Software Setup
+
+### Required Hardware
+
+### Required Software
+
+### Hardware Software
+
+## User Manual
+
+### Before Running This Application
+
+### Run This Application
