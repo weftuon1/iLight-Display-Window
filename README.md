@@ -36,8 +36,10 @@ This project is aiming to produce a display window that can control led light au
 - 8 White LED
 
 ### Required Software
+- Metaware or ARC GNU Toolset
+- Serial port terminal, such as putty, MobaXterm or minicom
 
-### Hardware Software
+### Hardware Connection
 
 ## User Manual
 
