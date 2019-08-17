@@ -28,6 +28,12 @@ This project is aiming to produce a display window that can control led light au
 ## Hardware and Software Setup
 
 ### Required Hardware
+- 1 ARC IoT Development Kit
+- 2 Servo Motor
+- 1 Ligt Sensor
+- 1 Webcam
+- 1 Raspberry Pi 3
+- 8 White LED
 
 ### Required Software
 
