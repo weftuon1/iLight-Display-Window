@@ -64,4 +64,4 @@ This project is aiming to produce a display window that can control led light au
 
 
 
-[0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/src/system_pic.png		"system architecture"
+[0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/system_pic.png		"system architecture"
