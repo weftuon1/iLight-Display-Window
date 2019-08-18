@@ -55,9 +55,12 @@ This project is aiming to produce a display window that can control led light au
 ## User Manual
 
 ### Before Running This Application
+- Environment: In door with proper lightness
+- On RPi: Install opencv, fswebcam, pyserial. Check ls /dev/video? before using fswebcam command.
+- On ARC IoTDK: Set parameters for location to degree transformation.
 
 ### Run This Application
-
+- make run
 
 
 
