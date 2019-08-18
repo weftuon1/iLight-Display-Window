@@ -23,7 +23,7 @@ This project is aiming to produce a display window that can control led light au
 - **Monitoring exhibit via camera**
 
 ### System Architecture
-![image](https://github.com/weftuon1/iLight-Display-Window/blob/master/src/system_pic.png)
+![system architecture][0]
 
 ## Hardware and Software Setup
 
@@ -34,6 +34,7 @@ This project is aiming to produce a display window that can control led light au
 - 1 Webcam
 - 1 Raspberry Pi 3
 - 8 White LED
+- 1 Wireless Dual-Band Mini USB Adapter(EW-7811UTC)
 
 ### Required Software
 - Metaware or ARC GNU Toolset
@@ -49,10 +50,15 @@ This project is aiming to produce a display window that can control led light au
 
 2. RPi
    - Connect to ARC IoTDK via uart.
-   - Connect to PC via wireless network card.
+   - Connect to PC via USB AP.
 
 ## User Manual
 
 ### Before Running This Application
 
 ### Run This Application
+
+
+
+
+[0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/src/system_pic.png		"system architecture"
