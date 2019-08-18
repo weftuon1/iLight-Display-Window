@@ -19,7 +19,7 @@ This project is aiming to produce a display window that can control led light au
 
 ### Function
 - **Detecting lightness of display window**
-- **Adjusting the luminance of LED and the postison to light on**
+- **Adjusting the luminance of LED and the position to light on**
 - **Monitoring exhibit via camera**
 
 ### System Architecture
@@ -37,9 +37,19 @@ This project is aiming to produce a display window that can control led light au
 
 ### Required Software
 - Metaware or ARC GNU Toolset
-- Serial port terminal, such as putty, MobaXterm or minicom
+- Serial port terminal, such as putty, MobaXterm or CuteCom
 
 ### Hardware Connection
+1. ARC IoTDK
+- Connect to PC via USB port
+- Connect to RPi via uart port(pin IO0, IO1, GND)
+- Connect to two servos via pin IO2, IO4, GND, VCC
+- Connect to LED vio pin IO3, GND
+- Connect to light sensor via pin AD0, GND, VCC
+
+2. RPi
+- Connect to ARC IoTDK via uart
+- Connect to PC via wireless network card
 
 ## User Manual
 
