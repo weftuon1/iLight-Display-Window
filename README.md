@@ -69,7 +69,7 @@ This project is aiming to produce a display window that can control led light au
 
 
 
-[0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/system_pic.png		"system architecture"
+[0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/system_architecture_pic.png		"system architecture"
 [1]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/ARC_connection.png	"ARC connection"
 [2]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/RPi_connection.png	"RPi connectoin"
 
