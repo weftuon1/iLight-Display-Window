@@ -54,6 +54,7 @@ This project is aiming to produce a display window that can control led light au
 2. RPi
    - Connect to ARC IoTDK via uart.
    - Connect to PC via USB AP.
+   - Connect camera via USB port
 ![RPi connection][2]
 
 ## User Manual
