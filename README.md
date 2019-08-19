@@ -49,10 +49,12 @@ This project is aiming to produce a display window that can control led light au
    - Connect to two servos via pin IO2, IO4, GND, VCC.
    - Connect to LED vio pin IO3, GND.
    - Connect to light sensor via pin AD0, GND, VCC.
+![ARC connection][1]
 
 2. RPi
    - Connect to ARC IoTDK via uart.
    - Connect to PC via USB AP.
+![RPi connection][2]
 
 ## User Manual
 
@@ -67,7 +69,8 @@ This project is aiming to produce a display window that can control led light au
 
 
 [0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/system_pic.png		"system architecture"
-
+[1]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/ARC_connection.png	"ARC connection"
+[2]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/RPi_connection.png	"RPi connectoin"
 
 [30]: https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html
 [31]: https://www.seeedstudio.com/Base-Shield-V2.html
