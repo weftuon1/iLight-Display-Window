@@ -63,10 +63,12 @@ This project is aiming to produce a display window that can control led light au
 - Environment: In door with proper lightness
 - On RPi: Install opencv, fswebcam, pyserial. Check ls /dev/video? before using fswebcam command.
 - On ARC IoTDK: Set parameters for location to degree transformation.
+- Connect Everything as mentioned above.
 
 ### Run This Application
-- make run
-
+- First, download the folder ./src/iLight_arc_node. Put it into the folder of /embarc_ops/example/baremetal, then command "make run".
+- After that, download the file ./RPi/find_the_darkest-area.py on RPi and run it. 
+- Camera will start to work and you're all set.
 
 
 [0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/architecture_system_pic.png		"system architecture"
