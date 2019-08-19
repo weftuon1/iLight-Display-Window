@@ -29,10 +29,12 @@ This project is aiming to produce a display window that can control led light au
 
 ### Required Hardware
 - 1 ARC IoT Development Kit
+- 1 Base Shiled V2
 - 2 Servo Motor
 - 1 Ligt Sensor
 - 1 Webcam
 - 1 Raspberry Pi 3
+- 1 Grove Base Hat for Raspberry Pi
 - 8 White LED
 - 1 Wireless Dual-Band Mini USB Adapter(EW-7811UTC)
 
@@ -65,3 +67,7 @@ This project is aiming to produce a display window that can control led light au
 
 
 [0]: https://github.com/weftuon1/iLight-Display-Window/blob/master/doc/system_pic.png		"system architecture"
+
+
+[30]: https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html
+[31]: https://www.seeedstudio.com/Base-Shield-V2.html
